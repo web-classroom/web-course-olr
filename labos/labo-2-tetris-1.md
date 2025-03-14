@@ -1,11 +1,12 @@
 ---
-title: TETRIS - Labo 1
+title: TETRIS - Partie I
 css: style.css
 ---
 
 <!-- # Changelog -->
 
 # Informations Générales
+- [**Lien vers votre repo Classroom**](https://classroom.github.com/a/HbFlIy8d)
 - **Date du rendu :** Communiqué dans GitHub Classroom
 - **Groupes** : À réaliser seul ou à deux
 - **Plagiat** : en cas de copie manifeste, vous y serez confrontés, vous obtiendrez la note de 1, et l'incident sera reporté au responsable de la filière, avec un risque d'échec critique immédiat au cours. Ne trichez pas. *(Notez que les IAs génératives se trouvent aujourd'hui dans une zone qui est encore juridiquement floue pour ce qui est du plagiat, mais des arguments se valent à en considérer l'utilisation comme tel. Quoi qu'il en soit, nous vous proposons une autre vision sur la question : votre ambition est d'apprendre et d'acquérir des compétences, et votre utilisation éventuelle de cet outil doit refléter ceci. Tout comme Stackoverflow peut être à la fois un outil d'enrichissement et une banque de copy-paste, faites un choix intentionnel et réfléchi, vos propres intérêts en tête, de l'outil que vous ferez de l'IA générative)*
