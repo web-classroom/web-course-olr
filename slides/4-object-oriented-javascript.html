@@ -51,7 +51,8 @@
                             - Object-oriented JavaScript
                             - Manipulating DOM objects
                             - Drawing in the HTML Canvas
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.6em">
             <textarea data-template>
@@ -67,7 +68,8 @@
                     - Draw in the HTML Canvas using JavaScript
                     - Manipulate arrays and objects in JavaScript using the array methods
 
-                </textarea>
+                </textarea
+            >
           </section>
 
           <section data-markdown>
@@ -75,7 +77,8 @@
                             <a href="https://www.destroyallsoftware.com/talks/wat" target="_blank">
                                 <img src="images/js_wat.png" style="width: 50%; text-align: center;" />
                             </a>
-                        </textarea>
+                        </textarea
+            >
           </section>
         </section>
 
@@ -106,7 +109,8 @@
 
                             </div>
 
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -137,7 +141,8 @@
                             `v` n'est défini que dans la fonction, bien que ce soit une `var`. `v` n'est donc pas défini dans le scope global, et l'appel à `console.log(v)` provoque une `ReferenceError`.
 
                             </div>
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -169,7 +174,8 @@
                             `v` est défini dans un bloc de la fonction, son scope est donc **toute** la fonction. `v` est donc définie à la ligne 5, et la ligne 6 retourne `42`.
 
                             </div>
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -236,7 +242,8 @@
                             La variable `v` déclarée dans la fonction `fun` est locale à la fonction, et ne modifie pas la variable `v` globale.
                               
                             </div>
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -263,7 +270,8 @@
                             Les *template literals* sont délimités par des backticks (\`). Ici, on utilise des guillemets (") qui ne sont pas interprétés comme des *template literals*. La chaîne de caractères est donc imprimée telle quelle.
 
                             </div>
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -300,7 +308,8 @@
                             Ensuite, les deux fonctions retournées par `fun` sont des closures, elles capturent donc `v`, et toute modification à une variable capturée depuis une closure modifie la variable elle-même dans son environnement de départ. `inc` et `dec` modifient donc la même variable, et les changements de l'un sont visibles par l'autre.
 
                             </div>
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -338,10 +347,11 @@
 
                             </div>
 
-                        </textarea>
+                        </textarea
+            >
           </section>
         </section>
-<!-- 
+        <!-- 
         <section>
           <section data-background="#333333">
             <h2><i class="fab fa-js"></i> Corrections</h2>
@@ -386,7 +396,8 @@
                             ```
 
                             https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.65em">
             <textarea data-template>
@@ -468,6 +479,7 @@
                                     return `This fruit is ${this.color}!`;
                                 }
                             }
+                            console.log(apple.toString()); // This fruit is red!
                             var f = apple.toString;
                             console.log(f()); // This fruit is undefined!
                             ```
@@ -510,7 +522,8 @@
                             - The `apply(this, args)` function is a method of `Function` instances, which allows to override the `this` object with one provided as argument. For example, given a `getName` method on a `Person` object, calling `getName.apply(animal, args)` will execute that `getName` function as if it had been called like `animal.getName(args)`.
                             - The `call(this, ...)` function is identical, except that the arguments are given directly, instead of in the form of an array.
                             - The `bind(this)` method of `Function` returns a new function whose `this` object is overridden with the provided one.
-                        </textarea>
+                        </textarea
+            >
           </section>
 
           <section data-markdown style="font-size: 0.7em">
@@ -547,7 +560,8 @@
                             - [`__proto__`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
                             - [`Object.getPrototypeOf()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf).
 
-                        </textarea>
+                        </textarea
+            >
           </section>
 
           <section data-markdown style="font-size: 0.7em">
@@ -576,7 +590,8 @@
 
                             </span>
                             
-                        </textarea>
+                        </textarea
+            >
           </section>
 
           <section data-markdown style="font-size: 0.6em">
@@ -638,7 +653,8 @@
                             console.log(Object.getPrototypeOf(scott) == Person.prototype); //true
                             ```
                             
-                          </textarea>
+                          </textarea
+            >
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -671,7 +687,7 @@
                         </textarea
             >
           </section>
-          
+
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fab fa-js"></i> Function prototypes
@@ -756,7 +772,7 @@
               Own properties are those that are defined directly on the object, as opposed to those that are inherited from the prototype chain.
             </textarea>
           </section> -->
-          <section data-markdown style="font-size: 0.6em;">
+          <section data-markdown style="font-size: 0.6em">
             <textarea data-template>
               ## <i class="fab fa-js"></i> Prototype Inheritance
 
@@ -813,7 +829,7 @@
               More details can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
             </textarea>
           </section>
-<!--
+          <!--
                               <section data-markdown style="font-size: 0.6em;">
                         <textarea data-template>
                             ## <i class="fab fa-js"></i> Prototypes on functions (Removed)
@@ -965,7 +981,8 @@
                             Note that `Array` is thus a function and the `new` operator makes it be used as a constructor.
 
                             https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.65em">
             <textarea data-template>
@@ -982,7 +999,8 @@
                             }
                             ```
 
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.75em">
             <textarea data-template>
@@ -1010,7 +1028,8 @@
 
                             The `fruits` array object inherits from `Array.prototype` (i.e. its `__proto__` points to `Array.prototype`).
 
-                        </textarea>
+                        </textarea
+            >
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -1025,7 +1044,8 @@
                               - Their special `prototype` property stores what will be the prototype of the objects it constructs.
 
                             
-                        </textarea>
+                        </textarea
+            >
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -1035,7 +1055,8 @@
                             As objects inherit properties from their prototype, we can say that JavaScript is a **prototype-based** language and not a **class-based** one.
 
                             While JavaScript does offer a class syntax, it is essentially **syntactic sugar** for the prototype-based inheritance system.
-                        </textarea>
+                        </textarea
+            >
           </section>
         </section>
 
@@ -1079,7 +1100,8 @@
                             - The `super` keyword is used to access and call functions on an object's parent.
 
                             https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-                        </textarea>
+                        </textarea
+            >
           </section>
           <!--
                     <section data-markdown style="font-size: 0.8em;">
@@ -1181,7 +1203,8 @@
                             ```
 
                             https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.7em">
             <textarea data-template>
@@ -1212,7 +1235,8 @@
 
                             Notes:
                             Static methods and properties are defined on the class itself, not on the prototype. They are thus not inherited by instances of the class.
-                        </textarea>
+                        </textarea
+            >
           </section>
 
           <!--                    <section data-markdown style="font-size: 0.8em;">
@@ -1292,7 +1316,8 @@
                             https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
 
-                        </textarea>
+                        </textarea
+            >
           </section>
         </section>
         <section>
@@ -1369,7 +1394,8 @@
                             - There can be only one `default` export per module which allows importing it directly under an alias without having to refer to its export name (if any)
 
 
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.65em">
             <textarea data-template>
@@ -1399,7 +1425,8 @@
                             <script type="module" src="index.js"></script>
                             ```
 
-                        </textarea>
+                        </textarea
+            >
           </section>
         </section>
 
@@ -1422,7 +1449,8 @@
                             - The DOM lets other programming languages manipulate the document
 
                             https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.7em">
             <textarea data-template>
@@ -1445,7 +1473,8 @@
                             <img src="images/html_content_tree.jpg" />
 
                             https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -1464,7 +1493,8 @@
                             ```
 
                             https://developer.mozilla.org/en-US/docs/Web/API/Document
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.7em">
             <textarea data-template>
@@ -1500,7 +1530,8 @@
                             ```
 
                             https://developer.mozilla.org/en-US/docs/Web/API/Element
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.7em">
             <textarea data-template>
@@ -1536,7 +1567,8 @@
                             Notes:
 
                             For an example of event propagation, see: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#example_5_event_propagation
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -1557,7 +1589,8 @@
                             ```
 
                             JQuery uses an **imperative style** that requires to specify the changes in the order they should happen. Modern frameworks (such as React, Angular or Vue) use a **declarative style** (what rather than how).
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -1577,7 +1610,8 @@
 
                             Each package indirectly depends on tens and tens of other packages on average, making more than a third of packages dependent on vulnerable code. This is due to old packages, poor dependency management, and poor awareness.
 
-                        </textarea>
+                        </textarea
+            >
           </section>
         </section>
 
@@ -1612,7 +1646,8 @@
                             <img src="./images/canvas_default_grid.png" style="width:20%">
 
                             https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.6em">
             <textarea data-template>
@@ -1649,7 +1684,8 @@
                             ```
 
                             https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.7em">
             <textarea data-template>
@@ -1697,7 +1733,8 @@
                             ```
                             Result: <img src="images/canvas_transform_render.jpg" />
                             https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
-                        </textarea>
+                        </textarea
+            >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -1715,7 +1752,8 @@
               `setInterval` [example](https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval#example_2_alternating_two_colors)
 
               `requestAnimationFrame` [example](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame#examples)
-              </textarea>
+              </textarea
+            >
           </section>
         </section>
 
