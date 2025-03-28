@@ -45,7 +45,6 @@
           <section data-markdown>
             <textarea data-template>
                 ## <i class="fas fa-tasks"></i> Overview of Today's Class
-                - Online quiz about last week's lecture
                 - Testing Javascript Applications
                   - Unit tests
                   - Integration tests
@@ -66,9 +65,12 @@
           </section>
         </section>
 
-        <section>
+        <section data-visibility="hidden">
           <section data-background="#333333">
-            <h2><i class="fas fa-question-circle"></i> Quiz</h2>
+            <h2>
+              <i class="fas fa-question-circle"></i>
+              Quiz
+            </h2>
             <h3>Object Oriented Javascript and more</h3>
           </section>
           <section data-markdown style="font-size: 0.8em">
@@ -100,8 +102,7 @@
 
                             </div>
 
-                        </textarea
-            >
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -129,8 +130,7 @@
 
                             [Spécification des types en JS](https://262.ecma-international.org/6.0/index.html#sec-ecmascript-data-types-and-values)
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -174,8 +174,7 @@
                             Veillez à bien comprendre la différence *sémantique* entre les objets qui sont des instances, les objets qui sont des constructeurs/classes, et ceux qui sont des prototypes.
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -226,8 +225,7 @@
                             [MDN Operators this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -260,8 +258,7 @@
                             L'output sera 34 car on lie le `this` de `doTwice` à `human`, que l'on passe ensuite à `f`, qu'on reçoit en paramètre, via `f.call(this)` .
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -301,8 +298,7 @@
                             Le fait de créer un object via un constructor ne change rien au problème de base.
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -339,8 +335,7 @@
 
                             La méthode `Object.assign()` est utilisée afin de copier les valeurs de toutes les propriétés directes (non héritées) d'un objet qui sont énumérables sur un autre objet cible. Cette méthode renvoie l'objet cible. [Source](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -379,8 +374,7 @@
                             L'output est `30`. En effet, `apply` permet d'appeler une fonction en spécifiant le contexte dans lequel elle est appelée. Ici, `student.getAge` est appelée avec `anotherStudent` comme contexte, donc `this` dans le corps de la fonction `getAge` pointe sur `anotherStudent`, et donc `this.age` vaut `30`.
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -449,8 +443,7 @@
                             Par contre l'array intercale des éléments vides entre les indices, c'est pourquoi le `length` est de `5`
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -483,8 +476,7 @@
                             L'output est `25`. En effet, le mot clé `new` crée un objet, et appelle la fonction `Student` avec ce nouvel objet comme contexte. La fonction `Student` crée une propriété `age` sur cet objet, mais retourne un autre objet. Si un constructeur ne retourne rien, c'est l'objet associé à son `this` qui sera retourné comme objet créé, mais si le constructeur retourne un objet, c'est celui-ci qui sera retourné. Donc l'output est `25`, puisque c'est la valeur de la propriété `age` de l'objet retourné par `Student`.
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -611,8 +603,7 @@
                             ```
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -663,8 +654,7 @@
                             ```
 
                             </div>
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
@@ -687,8 +677,7 @@
                                 }
                             }
                             ```
-                        </textarea
-            >
+            </textarea>
           </section>
         </section>
 
@@ -705,7 +694,10 @@
 
         <section>
           <section data-background="#333333">
-            <h2><i class="fab fa-js"></i> Testing JavaScript Applications</h2>
+            <h2>
+              <i class="fab fa-js"></i>
+              Testing JavaScript Applications
+            </h2>
           </section>
           <section data-markdown style="font-size: 0.8em; text-align: center">
             <textarea data-template>
@@ -722,34 +714,46 @@
 
                 *If you haven't tested it, assume it is broken!*
 
-                But from where should I start?
+                But where should we start?
 
                 Recall the cornerstones of computational thinking:
                 - Decomposition
                 - Data Representation / Pattern recognition
                 - Generalization / Abstraction
-                - Algorithm
+                - Algorithms
 
+                Notes:
+
+                - Decomposition: Break down a complex problem into smaller, more manageable parts
+                - Data Representation / Pattern recognition: Identify the patterns in the data and the parts, and their similarities and differences
+                - Generalization / Abstraction: Focus on the big picture, how the parts can be modeled into generic, strictly defined entities
+                - Algorithms: Solve the logical/computational part of the problem
+                
             </textarea>
           </section>
-          <section data-markdown style="font-size: 0.8em">
+          <section
+            data-markdown
+            style="font-size: 0.8em"
+            data-visibility="hidden"
+          >
             <textarea data-template>
                             *The whole is greater than the sum of its parts.*
                             **Aristotle**
                             <img src="images/car_disassembly.jpg"  style="width:600px; margin-top: 40px " />
-                        </textarea
-            >
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ##  <i class="fas fa-check-square"></i> Test automation
 
-                            In software testing, test automation is the use of a software separate from the software being tested to control the execution of tests and the comparison of actual outcomes with predicted outcomes.
+                            In software testing, test automation is the use of a specialized software that
+                            
+                            - controls the execution of tests on given software, and
+                            - compares actual and expected outcomes.
 
                             https://en.wikipedia.org/wiki/Test_automation
 
-                        </textarea
-            >
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em; text-align: center">
@@ -757,8 +761,54 @@
                             ##  <i class="fas fa-file-code"></i> Grab the code
 
                             https://github.com/web-classroom/test-automation
-                        </textarea
-            >
+            </textarea>
+          </section>
+
+          <section data-markdown style="font-size: 0.8em">
+            <textarea data-template>
+                            ##  <i class="fas fa-check-square"></i> Testing approaches
+
+                            In a software project,
+                            
+                            - some errors are highly dependent on the implementation details,
+                            - some are caused by un-intended usage of the software.
+                            
+                            Two main approaches to testing aim at covering both types of errors:
+                            
+                            - **White-box testing**, which assumes knowledge of the source code, and
+                            - **Black-box testing**, which treats the software as a black box.
+                  
+                            As we will see, which to use depends on the type of test being written.
+                            
+            </textarea>
+          </section>
+
+          <section data-markdown style="font-size: 0.8em">
+            <textarea data-template>
+                            ##  <i class="fas fa-check-square"></i> White-box testing
+                
+                            This approach
+                            
+                            - takes advantage of the knowledge of the internal logic of the tested code,
+                            - tries to cover all possible paths through the code,
+                            - requires that the test can access the tested source code.
+
+                            _**Example**: knowing the code uses a cast from `long` to `short` at some point, write a test that tries to create an overflow._
+            </textarea>
+          </section>
+
+          <section data-markdown style="font-size: 0.8em">
+            <textarea data-template>
+                            ##  <i class="fas fa-check-square"></i> Black-box testing
+                            
+                            This approach
+                            
+                            - treats the tested code as a black box,
+                            - is based on the user specification and expected behavior,
+                            - does not require access to the tested source code.
+
+                            _**Example**: test that an email validation function returns the expected error if the provided email is invalid._
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em; text-align: center">
@@ -774,48 +824,66 @@
                             - **Integration tests**: Individual units of software that pass unit tests are **assembled together into components**. Integration tests ensure that the components made of different parts work correctly together. The units are considered correct, and the goal is to test that the interaction between them is correct for what we want the component to do.
                             - **System tests**: All the component that pass the integration tests are **assembled together into the system**. System tests verify the **end-to-end functionality** of the system. They are usually **hard to automate** and very expensive to implement and execute.
 
-                        </textarea
-            >
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ##  <i class="fas fa-cog"></i> Unit tests
 
-                            - Test a **separable unit of software** for correctness, independently of the larger software System
-                            - Employed as a **low-level** specification to ensure that a function or module performs as expected
-                            - Usually fast to implement and execute
-                            - **Example:** *testing that the subscriber's email is valid*
+                            Unit tests are the foundation of a good testing strategy.
 
-                        </textarea
-            >
+                            - They focus on a single **separable unit of software**, i.e.
+                                - the smallest building blocks of an application,
+                                - with a single and clear responsibility.
+                            - They test each unit **in isolation**, i.e. independently of the larger system.
+                            - They can server as a **low-level** specification of a function or module's behavior.
+                            - They use the **white-box** testing approach.
+
+                            They are usually fast to implement and execute, and aim at detecting errors early.
+
+                            **Example:** *does the email validation function detect invalid emails?*
+                            
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ##  <i class="fas fa-cogs"></i> Integration Tests
 
-                            - Individual units of software that pass unit tests are **assembled together into components**
-                            - Integration tests ensure that the components made of different parts work well together
-                            - Sometimes slow to implement and execute
-                            - Might require to mock some dependencies, e.g. a messaging queue to some other part of the system
-                            - **Example:** *test that the email was persisted in the subscriber table of the database*
+                            Units of software that pass unit tests are assembled together into **components**.
 
-                        </textarea
-            >
+                            Integration tests ensure that these units are correctly assembled.
+
+                            - They focus on
+                                - verifying the interaction between units, and
+                                - testing that the resulting component behaves as expected.
+                            - They generally use the **black-box** testing approach.
+
+                            They are usually slower to implement and execute, and may need to mock some dependencies.
+                            
+                            **Example:** *test that a new subscriber is added to the database if the email is valid, possibly mocking the database.*
+
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ##  <i class="fas fa-car"></i> System Tests
 
-                            - All the component that pass the integration tests are **assembled together into the system**
-                            - System tests verify the **end-to-end functionality** of the system
-                            - Usually **hard to automate** and very expensive to implement and execute
-                            - Mocking some parts of application is sometimes needed, for example a third party system
-                            - **Example:** test that the user can subscribe to the mailing list by accessing the server from the chrome browser
-                        </textarea
-            >
+                            All the component that pass the integration tests are **assembled together into the system**.
+
+                            System tests verify that the entire system behaves as expected.
+
+                            - They include
+                                - **functional tests** that verify the **user functionality** of the system, and
+                                - **non-functional tests** that verify the **performance** and **reliability** of the system.
+                            - They use the **black-box** testing approach.
+
+                            They are usually hard to automate and very expensive to implement and execute.
+
+                            **Example:** *test that clicking on the subscribe button from the chrome browser sends a confirmation email and redirects to the home page.*
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -823,13 +891,13 @@
                             ##  <i class="fas fa-clipboard"></i> Key takeaways
 
                             - If you haven't tested it, assume it is broken!
-                            - Decomposition is the best friend of testable code
+                            - If you have tested it, *don't* assume it is working!
+                            - Decomposition is the best friend of testable code.
                             - When testing, write:
-                               - A lot of unit tests
+                               - A lot of unit tests *(ideally in parallel with the code)*
                                - Some integration tests
-                               - Few selected system tests
-                        </textarea
-            >
+                               - A few selected system tests
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em; text-align: center">
@@ -839,15 +907,13 @@
                             https://landing.google.com/sre/books/
 
                             **Chapter 17:** Testing for Reliability
-                        </textarea
-            >
+            </textarea>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Questions
-                        </textarea
-            >
+            </textarea>
           </section>
         </section>
       </div>

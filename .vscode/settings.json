@@ -24,5 +24,6 @@
   },
   "prettier.printWidth": 80,
   "prettier.proseWrap": "always",
-  "prettier.tabWidth": 2
+  "prettier.tabWidth": 2,
+  "prettier.htmlWhitespaceSensitivity": "ignore"
 }
