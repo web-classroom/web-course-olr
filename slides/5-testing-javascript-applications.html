@@ -44,16 +44,15 @@
           </section>
           <section data-markdown>
             <textarea data-template>
-                            ## <i class="fas fa-tasks"></i> Overview of Today's Class
-                            - Online quiz about last week's lecture
-                            - Testing Javascript Applications
-                              - Unit tests
-                              - Integration tests
-                              - System tests
-                        </textarea
-            >
+                ## <i class="fas fa-tasks"></i> Overview of Today's Class
+                - Online quiz about last week's lecture
+                - Testing Javascript Applications
+                  - Unit tests
+                  - Integration tests
+                  - System tests
+            </textarea>
           </section>
-          <section data-markdown style="font-size: 0.6em">
+          <section data-markdown>
             <textarea data-template>
                     ## <i class="fa-solid fa-graduation-cap"></i> Educational Objectives
                     On completion of this part, students will be able to:
@@ -61,43 +60,8 @@
                     - Describe the pros and cons of different types of tests
                     - Write unit tests for a JavaScript application
                     - Read and understand unit tests
-                    
 
                 </textarea
-            >
-          </section>
-          <section data-markdown>
-            <textarea data-template>
-                            ```js
-                            z = 1;
-
-                            function x() {
-                            y = 1;
-                            var z = 2;
-                            }
-
-                            x();
-
-                            console.log(y); // 1
-                            console.log(z); // 1
-                            ```
-              </textarea
-            >
-          </section>
-          <section data-markdown>
-            <textarea data-template>
-                            ```js
-                            function x() {
-                                y = 1;
-                                z = 2;
-                            }
-
-                            x();
-
-                            console.log(y); // 1
-                            console.log(z); // 2, car z est une variable globale
-                        ```
-                            </textarea
             >
           </section>
         </section>
@@ -110,7 +74,7 @@
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 1
-                            
+
                             Quelle est la valeur imprimée par le programme suivant?
 
                             ```js
@@ -121,32 +85,25 @@
                             ```
 
                             Notes:
-                            
+
                             <div class="spoiler">
 
-                            L'output est `"one"`. En effet, l'objet est créé avec une propriété nommée `1` : Javascript utilise la string comme un nom de propriété. Par la suite, lorsqu'on tente d'accédé à la propriété `1` de type `Number`, Javascript fait une conversion implicite de type pour comparer ce `1` au nom des propriétés de l'objet. L'objet a effectivement une propriété `"1"`, donc l'output est `"one"`.
-                                
+                            L'output est `"one"`.
+
+                            En effet, l'objet est créé avec une propriété nommée `1` qui est de type String.
+
+                            Pour rappel, les clefs des propriétés d'un objet en Javascript sont de type string ou symbol.
+
+                            Lorsqu'on tente d'accédé à la propriété `1` de type `Number`, Javascript fait une conversion implicite de type pour comparer ce `1` au nom des propriétés de l'objet.
+
+                            L'objet a effectivement une propriété `"1"`, donc l'output est `"one"`.
+
                             </div>
-                            
+
                         </textarea
             >
           </section>
-          <section data-markdown style="font-size: 0.8em">
-            <textarea data-template>
 
-                            ```js
-                            var obj = {
-                                "1": "one"
-                            }
-                            console.log(obj[1]);
-                            ```
-
-                            L'output est `"one"`. En effet, l'objet est créé avec une propriété nommée `1` : Javascript utilise la string comme un nom de propriété. Par la suite, lorsqu'on tente d'accédé à la propriété `1` de type `Number`, Javascript fait une conversion implicite de type pour comparer ce `1` au nom des propriétés de l'objet. L'objet a effectivement une propriété `"1"`, donc l'output est `"one"`.
-                                
-                            
-                        </textarea
-            >
-          </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 2
@@ -159,62 +116,67 @@
                             - Int
                             - Undefined
                             - String
-                            
+
                             Notes:
-                            
+
                             <div class="spoiler">
 
-                            - `Int` n'est pas un type primitif : Javascript représente tous ses nombres, avec ou sans virgule, avec le type `Number`.
-                            - `Array` n'est pas un type primitif : c'est une fonction qui crée un objet avec des propriétés spéciales, utilisé pour représenter des tableaux de données. C'est donc un objet.
+                            `Int` n'est pas un type primitif : Javascript représente tous ses nombres, avec ou sans virgule, avec le type `Number`. Il n'existe pas de type `Int`.
 
-                            [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values)
+                            `Array` n'est pas un type primitif : c'est une fonction qui créer un objet avec des propriétés spéciales, utilisé pour représenter des tableaux de données. C'est donc un objet.
+
+                            [Types primitifs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values)
+
+                            [Spécification des types en JS](https://262.ecma-international.org/6.0/index.html#sec-ecmascript-data-types-and-values)
                             </div>
                         </textarea
             >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
-                            Null, Undefined, Boolean, Number, BigInt, String, Symbol.
-
-
-                            - `Int` n'est pas un type primitif : Javascript représente tous ses nombres, avec ou sans virgule, avec le type `Number`.
-                            - `Array` n'est pas un type primitif : c'est une fonction qui crée un objet avec des propriétés spéciales, utilisé pour représenter des tableaux de données. C'est donc un objet.
-                        
-                            [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values)
-                            </textarea
-            >
-          </section>
-          <!-- <section data-markdown style="font-size: 0.8em">
-            <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 3
 
-                            Lorsqu'on parle d'une classe `Apple` qui hérite d'une classe `Fruit`, et ayant chacune une instance `apple` et `fruit`, quelles affirmations sont correctes.
+                            Etant donnée une classe `Apple` qui hérite d'une classe `Fruit`, et ayant chacune une instance `apple` et `fruit`:
+                            ```js
+                            class Fruit {}
+                            class Apple extends Fruit {}
+                            let fruit = new Fruit();
+                            let apple = new Apple();
+                            ```
+                            Quelles affirmations sont correctes ? (N.B. par prototype on entend la propriété `__proto__`)
+                            1. Le prototype de `apple` est `Apple`
+                            2. Le prototype de `Fruit` n'a pas de prototype, seuls les objets ont des prototypes
+                            3. Le prototype de `Apple.prototype` est `Fruit.prototype`
+                            4. Le prototype de `apple` est le prototype de `Fruit`
+                            5. Le prototype de `apple` est `Apple.prototype`
+                            6. Le prototype du prototype de `fruit` est `Object.prototype`
+                            7. Le prototype de `fruit` est `Fruit.prototype`
+                            8. Aucune des autres réponses
 
-                            `Fruit` possède une propriété `constructor` pointant sur `Fruit` lui-même
-
-                            - Le prototype de `apple` est `Apple`
-                            - Le prototype de `Fruit` n'a pas de prototype, seuls les objets ont des prototypes
-                            - Le prototype de `apple` est `Fruit`
-                            - Le prototype de `apple` est le prototype de `Fruit`
-                            - Le prototype de `Apple` est `Fruit`
-                            - Le prototype du prototype de `Apple` est le prototype de `Object`
-                            - Le prototype de `Fruit` est `Apple`
-                            - Aucune des autres réponses
-                            
                             Notes:
-                            
+
                             <div class="spoiler">
 
-                            Aucune des réponses n'est correcte. Ce qui s'apparente à une classe (`Apple` et `Fruit`) est ici une fonction qui a vocation à être utilisée comme un constructeur (et donc avec le mot clé `new`), qui a une propriété `prototype` pointant sur le prototype des objets créés par ce constructeur. Ce prototype est un objet comme un autre, dont la propriété prototype pointe sur le prototype du type d'objet hérité. Donc le prototype d'`Apple` pointe sur le prototype de `Fruit`, et celui de `Fruit` sur celui de `Object`.
+                            Les réponses 3, 5, 6 et 7 sont correctes.
 
-                            Les instances de `Apple` et `Fruit` sont des objets comme les autres, et leur propriété prototype pointe sur le prototype de la classe qui les a construits.
+                            Ce qui s'apparente à une classe (`Apple` et `Fruit`) est ici une fonction qui a pour but d'être utilisée comme constructeur (avec le mot clé `new`).
+
+                            Ces "fonction constructeur" ont une propriété `prototype` qui devient le prototype des instances créés via elles.
+                            Cette propriété `prototype` est un objet comme un autre, et a elle même également un prototype (propriété `__proto__`).
+
+                            Le prototype d'`Apple.prototype` pointe sur `Fruit.prototype`.
+
+                            Les instances `apple` et `fruit` de `Apple` et `Fruit` resp. sont des objets comme les autres, et leur propriété prototype pointe sur la propriété `prototype` de la classe/constructeur qui les a construits.
+
+
+                            Le prototype de `apple` est donc `Apple.prototype`.
 
                             Veillez à bien comprendre la différence *sémantique* entre les objets qui sont des instances, les objets qui sont des constructeurs/classes, et ceux qui sont des prototypes.
-                                
+
                             </div>
                         </textarea
             >
-          </section> -->
+          </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 4
@@ -238,19 +200,29 @@
 
                             console.log(human.age)
                             ```
-                            
+
                             - 32
                             - 33
                             - 34
                             - Une erreur est lancée
                             - Aucune des autres réponses
-                            
+
                             Notes:
-                            
+
                             <div class="spoiler">
 
-                            Une erreur est lancée. En effet, la fonction `getOlder` n'est pas appelée comme une méthode (c'est à dire avec la notation `.`). Similairement aux constructeurs, qui sont de simples fonctions s'ils ne sont pas appelés avec `new`, une méthode n'est qu'une fonction si elle n'est pas appelée avec sur un objet. Ici, la fonction `getOlder` est appelée comme une fonction, et donc `this` n'est pas défini dans son corps.
-                            
+                            32
+
+                            En effet, la fonction `getOlder` n'est pas appelée comme une méthode (c'est à dire avec la notation `.`).
+
+                            Similairement aux constructeurs, qui sont de simples fonctions s'ils ne sont pas appelés avec `new`, une méthode n'est qu'une fonction si elle n'est pas appelée avec sur un objet.
+
+                            Ici, la fonction `getOlder` est appelée comme une fonction, et donc `this` est le global `this`, et donc la variable `age` ne sera pas définie (`undefined`).
+
+                            JavaScript faisant des conversions parfois inattendues, `undefined++` donne `NaN`.
+
+                            Dans tous les cas, ce sera une variable `age` définie dans le global this qui sera incrémentée, et non pas celle de l'objet, d'où le résultat de 32.
+
                             [MDN Operators this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
                             </div>
@@ -262,25 +234,31 @@
             <textarea data-template>
                             # <i class="fas fa-question-circle"></i> Question 4
                             Suite
-                            
+
                             ```js
                             function doTwice(f) {
                                 f.call(this); // bind this to the current context
                                 f.call(this); // bind this to the current context
                             }
-                            
+
                             let human = {
                                 age: 32,
                                 getOlder() {
                                     this.age++;
                                 }
                             }
-                            
+
                             doTwice.call(human, human.getOlder); // bind this to human
-                            
-                            console.log(human.age); // Output will be 34
-                            
+
+                            console.log(human.age);
                             ```
+
+                            Notes:
+
+                            <div class="spoiler">
+
+                            L'output sera 34 car on lie le `this` de `doTwice` à `human`, que l'on passe ensuite à `f`, qu'on reçoit en paramètre, via `f.call(this)` .
+
                             </div>
                         </textarea
             >
@@ -290,29 +268,38 @@
             <textarea data-template>
                             # <i class="fas fa-question-circle"></i> Question 4
                             Suite (suite)
-                            
+
                             ```js
                             class Human {
                                 constructor(age) {
                                     this.age = age;
                                 }
-                            
+
                                 getOlder() {
                                     this.age++;
                                 }
                             }
-                            
+
                             function doTwice(f) {
                                 f.call(this); // bind this to the current context
                                 f.call(this); // bind this to the current context
                             }
-                            
+
                             let person = new Human(32);
-                            
+
                             doTwice.call(person, person.getOlder); // bind this to person
-                            
-                            console.log(person.age); // Output will be 34
+
+                            console.log(person.age);
                             ```
+
+                            Notes:
+
+                            <div class="spoiler">
+
+                            L'output sera 34.
+
+                            Le fait de créer un object via un constructor ne change rien au problème de base.
+
                             </div>
                         </textarea
             >
@@ -320,7 +307,7 @@
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 5
-                            
+
                             Qu'affiche le code suivant ?
 
                             ```js
@@ -342,38 +329,16 @@
                             - Une erreur est lancée
                             - Aucune des réponses ci-dessus
 
-                            La méthode `Object.assign()` est utilisée afin de copier les valeurs de toutes les propriétés directes (non héritées) d'un objet qui sont énumérables sur un autre objet cible. Cette méthode renvoie l'objet cible. [Source](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-                            
+
+
                             Notes:
-                            
+
                             <div class="spoiler">
 
                             L'output est `42`. En effet, `Object.assign` copie les propriétés de `student` dans `person`, mais ne crée pas de lien entre les deux objets. Donc lorsque la propriété `studentId` de `student` est modifiée, cela n'a aucun impact sur `person`.
-                                
+
+                            La méthode `Object.assign()` est utilisée afin de copier les valeurs de toutes les propriétés directes (non héritées) d'un objet qui sont énumérables sur un autre objet cible. Cette méthode renvoie l'objet cible. [Source](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
                             </div>
-                        </textarea
-            >
-          </section>
-          <section data-markdown style="font-size: 0.8em">
-            <textarea data-template>
-                            ## <i class="fas fa-question-circle"></i> Question 5
-                            
-                            Qu'affiche le code suivant ?
-
-                            ```js
-                            let person = {
-                                name: "John"
-                            };
-                            let student = {
-                                studentId: 42
-                            };
-                            Object.assign(person, student);
-                            student.studentId = 43;
-
-                            console.log(person.studentId);
-                            ```
-
-                            L'output est `42`. En effet, `Object.assign` copie les propriétés de `student` dans `person`, mais ne crée pas de lien entre les deux objets. Donc lorsque la propriété `studentId` de `student` est modifiée, cela n'a aucun impact sur `person`.
                         </textarea
             >
           </section>
@@ -406,42 +371,14 @@
                             - undefined
                             - Une erreur se produit car `getAge`, qui est une fonction, n'a pas de méthode `apply`.
                             - Aucune des autres réponses
-                            
+
                             Notes:
-                            
+
                             <div class="spoiler">
 
                             L'output est `30`. En effet, `apply` permet d'appeler une fonction en spécifiant le contexte dans lequel elle est appelée. Ici, `student.getAge` est appelée avec `anotherStudent` comme contexte, donc `this` dans le corps de la fonction `getAge` pointe sur `anotherStudent`, et donc `this.age` vaut `30`.
-                            
+
                             </div>
-                        </textarea
-            >
-          </section>
-          <section data-markdown style="font-size: 0.8em">
-            <textarea data-template>
-                            ## <i class="fas fa-question-circle"></i> Question 6
-
-                            Quelle est la valeur imprimée par le programme suivant?
-
-                            ```js
-                            var age = 20;
-                            var student = {
-                                age: 25,
-                                getAge: function() {
-                                    return this.age;
-                                }
-                            };
-                            var anotherStudent = {
-                                age: 30,
-                                getAge: function() {
-                                    return this.age;
-                                }
-                            };
-                            console.log(student.getAge.apply(anotherStudent))
-                            ```
-
-                            L'output est `30`. En effet, `apply` permet d'appeler une fonction en spécifiant le contexte dans lequel elle est appelée. Ici, `student.getAge` est appelée avec `anotherStudent` comme contexte, donc `this` dans le corps de la fonction `getAge` pointe sur `anotherStudent`, et donc `this.age` vaut `30`.
-                            
                         </textarea
             >
           </section>
@@ -460,41 +397,20 @@
 
                             console.log(d.myFormat())
                             ```
-                            
+
                             - La fonction est copiée instantanément dans toutes les instances existantes de la classe
                             - Une erreur a lieu car seules les instances futures de la classe hériteront la fonction
                             - Cela est interdit
                             - Aucune réponse correcte
-                            
+
                             Notes:
-                            
+
                             <div class="spoiler">
 
                             Cette action est parfaitement valide. Puisque toutes les instances de `Date` ont une propriété prototype qui pointe sur le prototype de `Date`, toute propriété définie sur le prototype, même après la création d'une instance, sera visible par celle-ci. Donc la fonction `myFormat` est bien visible par l'instance `d` de `Date`. En revanche, aucune réponse proposée n'est correcte, puisque la fonction n'est pas copiée dans les instances existantes, et qu'aucune erreur n'a lieu.
 
                             </div>
-                        </textarea
-            >
-          </section>
-          <section data-markdown style="font-size: 0.8em">
-            <textarea data-template>
-                            ## <i class="fas fa-question-circle"></i> Question 7
-
-                            Que se passe-t-il lorsque l'on ajoute une fonction au prototype d'une classe de la librairie standard?
-
-                            ```js
-                            let d = new Date();
-
-                            Date.prototype.myFormat = function() {
-                                return "The day is " + this.toLocaleDateString('en-us', { year:"numeric", month:"short"})
-                            }
-
-                            console.log(d.myFormat())
-                            ```
-
-                            Cette action est parfaitement valide. Puisque toutes les instances de `Date` ont une propriété prototype qui pointe sur le prototype de `Date`, toute propriété définie sur le prototype, même après la création d'une instance, sera visible par celle-ci. Donc la fonction `myFormat` est bien visible par l'instance `d` de `Date`. En revanche, aucune réponse proposée n'est correcte, puisque la fonction n'est pas copiée dans les instances existantes, et qu'aucune erreur n'a lieu.
-
-                        </textarea
+           </textarea
             >
           </section>
           <section data-markdown style="font-size: 0.7em">
@@ -512,7 +428,7 @@
                                 console.log(val)
                             }
                             ```
-                            
+
                             - 0 2 4
                             - 0 null 2 null 4
                             - 0 undefined 2 undefined 4
@@ -523,36 +439,16 @@
                             - zéro null deux null quatre
                             - Le code crée une out-of-bounds exception à la ligne 3
                             - Aucune autre réponse correcte
-                                                    
+
                             Notes:
-                            
+
                             <div class="spoiler">
 
-                            L'output est `0 2 4`. En effet, les tableaux en Javascript sont des objets, et les indices sont des propriétés de l'objet. Donc `arr[0]` est équivalent à créer une propriété appelée `"1"` sur l'objet `arr`, et similairement avec `2` et `4`. La boucle `for ... in` itère sur les propriétés de l'objet, donc les indices `0`, `2` et `4` sont imprimés.
-                                
+                            L'output est `0 2 4`. En effet, les tableaux en Javascript sont des objets, et les indices sont des propriétés de l'objet. Donc `arr[0]` est équivalent à créer une propriété appelée `"0"` sur l'objet `arr`, et similairement avec `2` et `4`. La boucle `for ... in` itère sur les propriétés de l'objet, donc les indices `0`, `2` et `4` sont imprimés.
+
+                            Par contre l'array intercale des éléments vides entre les indices, c'est pourquoi le `length` est de `5`
+
                             </div>
-                        </textarea
-            >
-          </section>
-          <section data-markdown style="font-size: 0.7em">
-            <textarea data-template>
-                            ## <i class="fas fa-question-circle"></i> Question 8
-
-                            Quelle est la valeur imprimée par le programme suivant?
-
-                            ```js[]
-                            var arr = [];
-                            arr[0] = "zéro";
-                            arr[2] = "deux";
-                            arr[4] = "quatre";
-                            for (var val in arr) {
-                                console.log(val)
-                            }
-                            ```
-                        
-
-                            L'output est `0 2 4`. En effet, les tableaux en Javascript sont des objets, et les indices sont des propriétés de l'objet. Donc `arr[0]` est équivalent à créer une propriété appelée `"1"` sur l'objet `arr`, et similairement avec `2` et `4`. La boucle `for ... in` itère sur les propriétés de l'objet, donc les indices `0`, `2` et `4` sont imprimés.
-                                
                         </textarea
             >
           </section>
@@ -579,72 +475,45 @@
                             - 30
                             - undefined
                             - Aucune des autres réponses
-                            
+
                             Notes:
-                            
+
                             <div class="spoiler">
 
                             L'output est `25`. En effet, le mot clé `new` crée un objet, et appelle la fonction `Student` avec ce nouvel objet comme contexte. La fonction `Student` crée une propriété `age` sur cet objet, mais retourne un autre objet. Si un constructeur ne retourne rien, c'est l'objet associé à son `this` qui sera retourné comme objet créé, mais si le constructeur retourne un objet, c'est celui-ci qui sera retourné. Donc l'output est `25`, puisque c'est la valeur de la propriété `age` de l'objet retourné par `Student`.
-                                
+
                             </div>
                         </textarea
             >
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
-                            ## <i class="fas fa-question-circle"></i> Question 9
+                  ## <i class="fas fa-question-circle"></i> Question 10
+                  En quelques mots, pourquoi est-il plus judicieux de définir les méthodes sur le prototype de l'objet plutot que sur l'objet lui-même.
 
-                            Quelle est la valeur imprimée par le programme suivant?
+                  Notes:
+                  <div class="spoiler">
 
-                            ```js
-                            var age = 20;
-                            function Student(age) {
-                                this.age = age
-                                return {
-                                    age: 25
-                                }
-                            }
-                            var student = new Student(30);
-                            console.log(student.age)
-                            ```
+                  En définissant les méthodes sur le prototype, on s'assure que toutes les instances de l'objet auront accès à la même fonction, et donc que la fonction ne sera pas dupliquée pour chaque instance. Cela permet d'économiser de la mémoire, et de s'assurer que toutes les instances auront accès à la même version de la fonction, même si celle-ci est modifiée après la création des instances.
 
-                            L'output est `25`. En effet, le mot clé `new` crée un objet, et appelle la fonction `Student` avec ce nouvel objet comme contexte. La fonction `Student` crée une propriété `age` sur cet objet, mais retourne un autre objet. Si un constructeur ne retourne rien, c'est l'objet associé à son `this` qui sera retourné comme objet créé, mais si le constructeur retourne un objet, c'est celui-ci qui sera retourné. Donc l'output est `25`, puisque c'est la valeur de la propriété `age` de l'objet retourné par `Student`.
-                                
-                        </textarea
+                  </div>
+              </textarea
             >
           </section>
-          <!-- <section data-markdown style="font-size: 0.8em">
-            <textarea data-template>
-                            ## <i class="fas fa-question-circle"></i> Question 10
-
-                            En quelques mots, pourquoi est-il plus judicieux de définir les méthodes sur le prototype de l'objet plutot que sur l'objet lui-même.
-                            
-                            Notes:
-                            
-                            <div class="spoiler">
-
-                            En définissant les méthodes sur le prototype, on s'assure que toutes les instances de l'objet auront accès à la même fonction, et donc que la fonction ne sera pas dupliquée pour chaque instance. Cela permet d'économiser de la mémoire, et de s'assurer que toutes les instances auront accès à la même version de la fonction, même si celle-ci est modifiée après la création des instances.
-
-                            Une autre raison est que si on définit la fonction sur l'objet lui-même, on ne peut pas utiliser le mot clé `this` dans le corps de la fonction, puisque `this` pointera sur l'objet lui-même, et non sur l'instance de l'objet sur laquelle la fonction est appelée. Donc on ne peut pas utiliser `this` pour accéder aux propriétés de l'instance, qui seraient, elles, définies sur l'instance.
-                                
-                            </div>
-                        </textarea
-            >
-          </section> -->
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 11
 
                             Implémenter quelque chose de ressemblant à ce qui suit.
-                            
-                            <img src="http://github.com/OlivierLmr/hoster/blob/main/web-test-dummy-web.gif?raw=true" alt="gif of what should be recreated">
+
+                            <img src="images/web-test-dummy-web.gif" alt="gif of what should be recreated">
 
                             Les items doivent être des balises `<li>` avec un attribut nommé `hair` dont la valeur correspond à la couleur de cheveux de chaque personne dans la liste. Cliquer sur les boutons highlight les personnes aux cheveux de couleur correspondante.
-                            
+
                             [Start](https://web-classroom.github.io/heig-vd-web-course/docs/99-examples/hairDomSelect.html) · [Solution](https://web-classroom.github.io/heig-vd-web-course/docs/99-examples/hairDomSelectSolution.html)
 
                             Notes:
-                            
+
                             <div class="spoiler">
 
                             ```html
@@ -683,39 +552,40 @@
                                 --button-hover-background: #dde;
                                 --highlighted-li-background: #ffa
                             }
-                            
+
                             #people_list {
                                 display: flex;
                                 flex-direction: column;
                                 gap: 10px;
                                 padding: 0;
                             }
-                            
+
                             li {
                                 list-style: none;
                                 padding: 10px;
                                 background: whitesmoke;
                                 border-radius: 5px;
                             }
-                            
+
                             #metadata {
-                                display: grid;
-                                grid-template-columns: 1fr 1fr 1fr;
+                                /* can also use display: grid; grid-template-columns: 1fr 1fr 1fr; */
+                                display: flex;
                                 gap: 10px;
                             }
-                            
+
                             button {
+                                flex-grow: 1;
                                 border: none;
                                 padding: 10px;
                                 border-radius: 5px;
                                 cursor: pointer;
                                 background: var(--button-background)
                             }
-                            
+
                             button:hover {
                                 background: var(--button-hover-background)
                             }
-                            
+
                             .selected {
                                 background: var(--highlighted-li-background)
                             }
@@ -731,7 +601,7 @@
                                     e.classList.add("selected")
                                 })
                             }
-                            
+
                             function reset() {
                                 elements = document.querySelectorAll(`li`)
                                 elements.forEach((e) => {
@@ -739,7 +609,7 @@
                                 })
                             }
                             ```
-                            
+
                             </div>
                         </textarea
             >
@@ -747,35 +617,41 @@
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 12
-                            
+
                             Modifiez le code suivant pour qu'il n'utilise plus la syntaxe de classes mais garde les mêmes fonctionnalités. En particulier, l'age ne doit pas être une valeur publique de l'objet.
-                            
+
                             ```js
                             class Human {
                                 #age
-                            
+
                                 constructor(age) {
                                     this.#age = age
                                 }
-                            
+
                                 getAge() {
                                     return this.#age
                                 }
-                            
+
                                 getOlder() {
                                     this.#age++
                                 }
                             }
                             ```
-                            
+
                             Notes:
-                            
+
                             <div class="spoiler">
+
+                            Une solution consiste à utiliser un constructeur, qui lorsqu'on l'appelle avec `new` va retourner
+                            un nouvel object auquel on aura ajouté les deux méthodes `getAge` et `getOlder` via la référence `this` qui est liée à l'objet nouvellement créé.
+
+                            Afin de cacher la variable `age` on peut utiliser une variable locale à la fonction qui sera capturée par les méthodes `getAge` et `getOlder` (closure) et qui pourra
+                            ensuite être accédée et modifée par celles-ci.
 
                             ```js
                             function Human(age) {
                                 let priv_age = age
-                                
+
                                 this.getAge = function() {
                                     return priv_age
                                 }
@@ -785,7 +661,7 @@
                                 }
                             }
                             ```
-                                
+
                             </div>
                         </textarea
             >
@@ -793,10 +669,15 @@
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fas fa-question-circle"></i> Question 12 (solution)
+                            Une solution consiste à utiliser un constructeur, qui lorsqu'on l'appelle avec `new` va retourner
+                            un nouvel object auquel on aura ajouté les deux méthodes `getAge` et `getOlder` via la référence `this` qui est liée à l'objet nouvellement créé.
+
+                            Afin de cacher la variable `age` on peut utiliser une variable locale à la fonction qui sera capturée par les méthodes `getAge` et `getOlder` (closure) et qui pourra
+                            ensuite être accédée et modifée par celles-ci.
                             ```js
                             function Human(age) {
                                 let priv_age = age
-                                
+
                                 this.getAge = function() {
                                     return priv_age
                                 }
@@ -826,39 +707,34 @@
           <section data-background="#333333">
             <h2><i class="fab fa-js"></i> Testing JavaScript Applications</h2>
           </section>
-          <section
-            data-visibility="hidden"
-            data-markdown
-            style="font-size: 0.8em; text-align: center"
-          >
+          <section data-markdown style="font-size: 0.8em; text-align: center">
             <textarea data-template>
-                            <img src="images/good_code.png" style="width: 30%;" />
-                            
-                            https://xkcd.com/844/
-                        </textarea
+                  <img src="images/good_code.png" style="width: 30%;" />
+
+                  https://xkcd.com/844/
+              </textarea
             >
           </section>
 
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
-                            ##  <i class="fas fa-question-circle"></i> How to write good code?
-                            
-                            *If you haven't tested it, assume it is broken!*
+                ##  <i class="fas fa-question-circle"></i> How to write good code?
 
-                            But from where should I start?
+                *If you haven't tested it, assume it is broken!*
 
-                            Recall the cornerstones of computational thinking:
-                            - Decomposition
-                            - Data Representation / Pattern recognition
-                            - Generalization / Abstraction
-                            - Algorithm
+                But from where should I start?
 
-                        </textarea
-            >
+                Recall the cornerstones of computational thinking:
+                - Decomposition
+                - Data Representation / Pattern recognition
+                - Generalization / Abstraction
+                - Algorithm
+
+            </textarea>
           </section>
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
-                            *The whole is greater than the sum of its parts.* 
+                            *The whole is greater than the sum of its parts.*
                             **Aristotle**
                             <img src="images/car_disassembly.jpg"  style="width:600px; margin-top: 40px " />
                         </textarea
@@ -879,7 +755,7 @@
           <section data-markdown style="font-size: 0.8em; text-align: center">
             <textarea data-template>
                             ##  <i class="fas fa-file-code"></i> Grab the code
-                            
+
                             https://github.com/web-classroom/test-automation
                         </textarea
             >
@@ -897,7 +773,7 @@
                             - **Unit tests**: Test a **separable unit of software** for correctness, independently of the larger software System. That unit is usually the smallest testable part of an application, and has a single and clear responsibility.
                             - **Integration tests**: Individual units of software that pass unit tests are **assembled together into components**. Integration tests ensure that the components made of different parts work correctly together. The units are considered correct, and the goal is to test that the interaction between them is correct for what we want the component to do.
                             - **System tests**: All the component that pass the integration tests are **assembled together into the system**. System tests verify the **end-to-end functionality** of the system. They are usually **hard to automate** and very expensive to implement and execute.
-                            
+
                         </textarea
             >
           </section>
@@ -922,6 +798,7 @@
                             - Individual units of software that pass unit tests are **assembled together into components**
                             - Integration tests ensure that the components made of different parts work well together
                             - Sometimes slow to implement and execute
+                            - Might require to mock some dependencies, e.g. a messaging queue to some other part of the system
                             - **Example:** *test that the email was persisted in the subscriber table of the database*
 
                         </textarea
@@ -935,6 +812,7 @@
                             - All the component that pass the integration tests are **assembled together into the system**
                             - System tests verify the **end-to-end functionality** of the system
                             - Usually **hard to automate** and very expensive to implement and execute
+                            - Mocking some parts of application is sometimes needed, for example a third party system
                             - **Example:** test that the user can subscribe to the mailing list by accessing the server from the chrome browser
                         </textarea
             >
@@ -958,8 +836,8 @@
             <textarea data-template>
                             <img src="images/sre.jpg" />
 
-                            https://landing.google.com/sre/books/ 
-                            
+                            https://landing.google.com/sre/books/
+
                             **Chapter 17:** Testing for Reliability
                         </textarea
             >

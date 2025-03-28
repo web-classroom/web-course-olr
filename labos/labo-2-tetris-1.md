@@ -20,7 +20,7 @@ css: style.css
   _(Notez que les IAs génératives se trouvent aujourd'hui dans une zone qui est
   encore juridiquement floue pour ce qui est du plagiat, mais des arguments se
   valent à en considérer l'utilisation comme tel. Quoi qu'il en soit, nous vous
-  proposons une autre vision sur la question : votre ambition est d'apprendre et
+  proposons une autre vision sur la question : votre ambition est d'apprendre et
   d'acquérir des compétences, et votre utilisation éventuelle de cet outil doit
   refléter ceci. Tout comme StackOverflow peut être à la fois un outil
   d'enrichissement et une banque de copy-paste, faites un choix intentionnel et
@@ -189,7 +189,7 @@ choisie arbitrairement pour être placée, et l'autre est remplacée. Si les deu
 peuvent être placée, alors elles le sont toutes les deux.
 
 Pour assurer le déterminisme du jeu, nous imposons l'ordre suivant de traitement
-des événements, au sein d'un même step :
+des événements, au sein d'un même step :
 
 <div id="step_detail_update"></div>
 
@@ -236,7 +236,7 @@ Le repository contient déjà un certain nombre de tests que nous utiliserons po
 noter votre travail, mais nous nous réservons le droit d'en ajouter d'autres et
 d'évaluer votre rendu manuellement. Aussi, nous vous recommandons de ne pas vous
 reposer uniquement sur les tests donnés. Vous êtes notamment libres d'ajouter de
-nouveaux tests si vous le souhaitez ; nous vous demanderons toutefois de le
+nouveaux tests si vous le souhaitez ; nous vous demanderons toutefois de le
 faire dans de nouveaux fichiers. Nous vérifierons en effet que les tests fournis
 n'ont pas été modifiés, afin de garantir que vous les passez pour les bonnes
 raisons ;)
