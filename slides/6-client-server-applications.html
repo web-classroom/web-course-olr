@@ -71,7 +71,10 @@
 
         <section>
           <section data-background="#333333">
-            <h2><i class="fab fa-js"></i> Array Methods</h2>
+            <h2>
+              <i class="fab fa-js"></i>
+              Array Methods
+            </h2>
           </section>
           <section data-markdown style="font-size: 0.7em">
             <textarea data-template>
@@ -293,6 +296,10 @@
 
 
 
+                            The comparator function takes two parameters `a` and `b` and should return:
+                            - `-1` if `a` comes before `b`
+                            - `1` if `a` comes after `b`
+                            - `0` if `a` is equal to `b`
                         </textarea
             >
           </section>
@@ -362,6 +369,10 @@
                             console.log(a); // ["apple", "banana", "pear"]
                             ```
 
+                            Notes:
+                            A predicate is a function that takes one or several arguments and returns a boolean.
+
+
                         </textarea
             >
           </section>
@@ -420,7 +431,8 @@
                             ```
 
                             `reduceRight()` does the same, but from right to left.
-                        </textarea
+
+              </textarea
             >
           </section>
           <section data-markdown style="font-size: 0.6em">
@@ -477,7 +489,7 @@
                             Le résultat final ici est 13, car le map transforme [1,2,3] en [1,4,9], le filter garde [4,9] et le reduce les additionne.
 
                             </div>
-                            
+
                         </textarea
             >
           </section>
@@ -555,7 +567,10 @@
 
         <section>
           <section data-background="#333333">
-            <h2><i class="fab fa-js"></i> Iterators and Generators</h2>
+            <h2>
+              <i class="fab fa-js"></i>
+              Iterators and Generators
+            </h2>
           </section>
           <section data-markdown style="font-size: 0.6em">
             <textarea data-template>
@@ -591,10 +606,13 @@
 
                         *Recall: The `for...of` loop requires its second operand to be an iterable.*
 
+                        Notes:
+
+                        Basically the `for .. of` will first call the `Symbol.iterator` method which will return the iterator. It will then call the iterators `next()` method until `done: true`:
+
                       </textarea
             >
           </section>
-
           <section data-markdown style="font-size: 0.6em">
             <textarea data-template>
                         ## <i class="fab fa-js"></i> Iterators
@@ -690,7 +708,7 @@
                             Note that the generator function is not the generator itself,
 
                             - `function* () { ... }` is neither iterable nor an iterator.
-                            - Calling the generator function returns the generator, which is itself the iterator.
+                            - Calling the generator function returns the generator, which is itself an iterator.
                         </textarea
             >
           </section>
@@ -855,7 +873,7 @@
                         </textarea
             >
           </section> -->
-          <!-- 
+          <!--
           <section data-markdown style="font-size: 0.8em">
             <textarea data-template>
                             ## <i class="fab fa-js"></i> Exercice : Flattening generator
@@ -1045,7 +1063,10 @@
 
         <section>
           <section data-background="#333333">
-            <h2><i class="fab fa-js"></i> Client-Server Applications</h2>
+            <h2>
+              <i class="fab fa-js"></i>
+              Client-Server Applications
+            </h2>
           </section>
 
           <section data-markdown style="font-size: 0.8em">
@@ -1095,7 +1116,7 @@
                             - The form's button element of type `submit` defines the button the user clicks to send the data to the server.
                             
                             https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form
-                        
+
                         </textarea
             >
           </section>
@@ -1143,8 +1164,7 @@
 
                             Notes:
 
-                            The line between middleware and router is sometimes blurry. The middleware layer is usually used to process the request and response, while the router is used to map the request to the appropriate code.
-                            
+                            The line between middleware and router is sometimes blurry. The router is only responsible for mapping the request to the appropriate code, while the middleware is what actually processes the request and response.
                         </textarea
             >
           </section>
@@ -1185,7 +1205,7 @@
                             Notes:
 
                             The callback functions passed to the app.get and app.post methods are called **middleware**. There can be multiple per route, and they are executed in the order they are defined, where the last one in the chain sends the response back to the client. One can also jump to the next middleware early using the next() function. They are used to process the request and response. Technically, the application's logic runs in the context of a middleware, but it is common to separate the code handling HTTP requests and responses from the code implementing the application's logic.
-                            
+
                         </textarea
             >
           </section>
