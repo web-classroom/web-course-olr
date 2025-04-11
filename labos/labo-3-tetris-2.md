@@ -35,7 +35,7 @@ css: style.css
 # Lien avec le précédent labo
 
 Ce labo est une suite du premier labo sur Tetris. Toutes les informations
-données dans [l'énoncé du premier labo](./labo-2-tetris-1.md) restent donc
+données dans [l'énoncé du premier labo](./labo-2-tetris-1.html) restent donc
 valables pour celui-ci.
 
 Au moment de rejoindre ce nouvel assignment sur Github Classroom, un nouveau
