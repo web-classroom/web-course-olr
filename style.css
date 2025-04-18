@@ -54,20 +54,19 @@ h2 {
   width: 100%;
 }
 
-.timeline-table tr.vacances {
+.timeline-table td.vacances,
+.timeline-table tr.vacances > td {
   font-style: italic;
   background: #222936;
-}
-.timeline-table tr.vacances > * {
   opacity: 0.4;
 }
 
-.timeline-table tr.vacances > *:last-child {
+/* .timeline-table .vacances > *:last-child {
   font-size: 0.8em;
   margin: 0.5em 0;
   padding: 0.7em 0.5em;
   color: #888;
-}
+} */
 
 .yellow {
   color: var(--yellow);
