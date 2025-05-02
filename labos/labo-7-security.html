@@ -52,17 +52,13 @@
                  </header>
              <nav id="TOC" role="doc-toc">
          <ul>
-<li><a href="#labo-7---web-security" id="toc-labo-7---web-security">Labo
-7 - Web Security</a>
-<ul>
-<li><a href="#changelog" id="toc-changelog">Changelog</a></li>
-</ul></li>
 <li><a href="#informations-générales"
 id="toc-informations-générales">Informations Générales</a>
 <ul>
 <li><a href="#connexion-au-service"
 id="toc-connexion-au-service">Connexion au service</a></li>
 <li><a href="#objectifs" id="toc-objectifs">Objectifs</a></li>
+</ul></li>
 <li><a href="#capture-the-flags" id="toc-capture-the-flags">Capture the
 flags</a>
 <ul>
@@ -72,7 +68,6 @@ flags</a>
 <li><a href="#correction-des-vulnérabilités"
 id="toc-correction-des-vulnérabilités">Correction des
 vulnérabilités</a></li>
-</ul></li>
 <li><a href="#détails-techniques" id="toc-détails-techniques">Détails
 techniques</a></li>
 <li><a href="#rendu" id="toc-rendu">Rendu</a>
@@ -86,48 +81,23 @@ vulnérabilités</a></li>
 </ul></li>
 </ul>
       </nav>
-       <h1 id="labo-7---web-security">Labo 7 - Web Security</h1>
-<h2 id="changelog">Changelog</h2>
-<table>
-<colgroup>
-<col style="width: 4%" />
-<col style="width: 95%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Changement</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>02.05</td>
-<td>Reformulation - le troisième flag est bien obtenu en faisant envoyer
-un message par Echo à Nova.</td>
-</tr>
-</tbody>
-</table>
-<h1 id="informations-générales">Informations Générales</h1>
-<p><strong>WEB-B &amp; WEB-C</strong> :</p>
-<ul>
-<li><strong>Date du rendu des flags &amp;&amp; de la correction des
-failles :</strong> Mercredi 7 avril 2025, 23:59 CEST</li>
-</ul>
-<p><strong>WEB-A</strong> :</p>
+       <h2 id="informations-générales">Informations Générales</h2>
 <ul>
 <li><strong>Date du rendu des flags &amp;&amp; de la correction des
 failles :</strong> Vendredi 9 avril 2025, 23:59 CEST</li>
+<li><a href="https://classroom.github.com/a/PrmTPRDA"><strong>Lien du
+code source</strong></a></li>
 </ul>
 <p>Dans ce labo, nous vous donnons accès à un site web dont nous vous
 demandons d’exploiter les vulnérabilités. Il s’agit d’une app web de
 chat privé en temps réel très basique, baptisée <a
 href="http://tweb.iict-heig-vd.in/login">ChatsApp</a>, accessible
 uniquement sur le VPN ou sur le réseau de l’école.</p>
-<h2 id="connexion-au-service">Connexion au service</h2>
+<h3 id="connexion-au-service">Connexion au service</h3>
 <p>Vous devez avoir reçu par mail deux identifiants personnels pour vous
 connecter à <a href="http://tweb.iict-heig-vd.in/login">ChatsApp</a>.
 Ils correspondent aux deux parties de ce labo.</p>
-<h2 id="objectifs">Objectifs</h2>
+<h3 id="objectifs">Objectifs</h3>
 <p>Ce labo est divisé en 2 phases. La première consiste à trouver 6
 flags cachés dans ChatsApp. La seconde vous demandera de corriger les
 vulnérabilités que vous aurez exploitées dans la première phase.</p>
@@ -232,7 +202,7 @@ identifiants directement dans des cookies.</li>
 <li>Utiliser un framework d’authentification</li>
 <li>Utiliser un framework d’autorisation</li>
 </ul>
-<h1 id="détails-techniques">Détails techniques</h1>
+<h2 id="détails-techniques">Détails techniques</h2>
 <p>Afin de garantir que le système soit toujours fonctionnel, nous avons
 mis en place les mesures suivantes :</p>
 <ul>
@@ -244,7 +214,7 @@ pour les obtenir.</li>
 <li>Un autre serveur maintient ouvert une page web dans laquelle Echo
 est connecté à ChatsApp, votre conversation ouverte, afin d’activer
 toute attaque nécessitant une exécution de JS chez la victime. Cette
-page est rechargée toutes les 30 secondes, ± 5s.</li>
+page est rechargée toutes les 90 secondes, ± 30s.</li>
 <li>Un bouton <code>Reset</code> dans l’interface de ChatsApp vous
 permet de réinitialiser tous les messages envoyés entre vous, Echo, et
 Nova.</li>
@@ -252,16 +222,16 @@ Nova.</li>
 d’autres “instances” d’Echo et Nova, pour éviter toute
 interférence.</li>
 </ul>
-<h1 id="rendu">Rendu</h1>
+<h2 id="rendu">Rendu</h2>
 <p>Pour le rendu de ce labo, nous vous demandons les données
 suivantes.</p>
-<h2 id="flags">Flags</h2>
+<h3 id="flags">Flags</h3>
 <p>Nous vous demandons de nous fournir les 6 flags. Pour chaque flag,
 précisez aussi les démarches qui vous ont permis leur obtention (par
 exemple, l’input fourni s’il s’agit d’une attaque XSS).</p>
 <p>Ceci est à fournir <strong>dans votre Readme</strong> dans la section
 indiquée.</p>
-<h2 id="exploit-supplémentaire">Exploit supplémentaire</h2>
+<h3 id="exploit-supplémentaire">Exploit supplémentaire</h3>
 <p>Nous vous demandons aussi de nous fournir un lien vers ChatsApp
 qui, lorsque l’on clique dessus, exécutera
 <code>alert(document.cookie)</code> dans notre navigateur, que l’on soit
@@ -271,8 +241,8 @@ vous pourriez donc, au lieu d’afficher nos cookies, les envoyer avec
 récupérer, sans même que nous ne nous en rendions compte)</em></p>
 <p>Ceci est à fournir <strong>dans votre Readme</strong> dans la section
 indiquée.</p>
-<h2 id="correction-des-vulnérabilités-1">Correction des
-vulnérabilités</h2>
+<h3 id="correction-des-vulnérabilités-1">Correction des
+vulnérabilités</h3>
 <p>Une version de ChatsApp vous est fournie lorsque vous rejoignez
 l’assignment. Il correspond à la version 2 que vous avez attaquée dans
 ce labo, mais sans le correctif de la vulnérabilité que vous avez

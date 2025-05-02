@@ -3,38 +3,24 @@ title: Labo 7 - Web Security
 css: style.css
 ---
 
-# Labo 7 - Web Security
-
-## Changelog
-
-| Date  | Changement                                                                                       |
-| ----- | ------------------------------------------------------------------------------------------------ |
-| 02.05 | Reformulation - le troisième flag est bien obtenu en faisant envoyer un message par Echo à Nova. |
-
-# Informations Générales
-
-**WEB-B & WEB-C** :
-
-- **Date du rendu des flags && de la correction des failles :** Mercredi 7 avril
-  2025, 23:59 CEST
-
-**WEB-A** :
+## Informations Générales
 
 - **Date du rendu des flags && de la correction des failles :** Vendredi 9 avril
   2025, 23:59 CEST
+- [**Lien du code source**](https://classroom.github.com/a/PrmTPRDA)
 
 Dans ce labo, nous vous donnons accès à un site web dont nous vous demandons
 d'exploiter les vulnérabilités. Il s'agit d'une app web de chat privé en temps
 réel très basique, baptisée [ChatsApp](http://tweb.iict-heig-vd.in/login),
 accessible uniquement sur le VPN ou sur le réseau de l'école.
 
-## Connexion au service
+### Connexion au service
 
 Vous devez avoir reçu par mail deux identifiants personnels pour vous connecter
 à [ChatsApp](http://tweb.iict-heig-vd.in/login). Ils correspondent aux deux
 parties de ce labo.
 
-## Objectifs
+### Objectifs
 
 Ce labo est divisé en 2 phases. La première consiste à trouver 6 flags cachés
 dans ChatsApp. La seconde vous demandera de corriger les vulnérabilités que vous
@@ -144,7 +130,7 @@ aspects de sécurité. Nous vous demandons de modifier le code de ChatsApp afin 
 - Utiliser un framework d'authentification
 - Utiliser un framework d'autorisation
 
-# Détails techniques
+## Détails techniques
 
 Afin de garantir que le système soit toujours fonctionnel, nous avons mis en
 place les mesures suivantes :
@@ -156,17 +142,17 @@ place les mesures suivantes :
 - Un autre serveur maintient ouvert une page web dans laquelle Echo est connecté
   à ChatsApp, votre conversation ouverte, afin d'activer toute attaque
   nécessitant une exécution de JS chez la victime. Cette page est rechargée
-  toutes les 30 secondes, ± 5s.
+  toutes les 90 secondes, ± 30s.
 - Un bouton `Reset` dans l'interface de ChatsApp vous permet de réinitialiser
   tous les messages envoyés entre vous, Echo, et Nova.
 - Notez par ailleurs que les autres étudiants communiquent avec d'autres
   "instances" d'Echo et Nova, pour éviter toute interférence.
 
-# Rendu
+## Rendu
 
 Pour le rendu de ce labo, nous vous demandons les données suivantes.
 
-## Flags
+### Flags
 
 Nous vous demandons de nous fournir les 6 flags. Pour chaque flag, précisez
 aussi les démarches qui vous ont permis leur obtention (par exemple, l'input
@@ -174,7 +160,7 @@ fourni s'il s'agit d'une attaque XSS).
 
 Ceci est à fournir **dans votre Readme** dans la section indiquée.
 
-## Exploit supplémentaire
+### Exploit supplémentaire
 
 Nous vous demandons aussi de nous fournir un lien vers ChatsApp qui, lorsque
 l'on clique dessus, exécutera `alert(document.cookie)` dans notre navigateur,
@@ -185,7 +171,7 @@ nous en rendions compte)_
 
 Ceci est à fournir **dans votre Readme** dans la section indiquée.
 
-## Correction des vulnérabilités
+### Correction des vulnérabilités
 
 Une version de ChatsApp vous est fournie lorsque vous rejoignez l'assignment. Il
 correspond à la version 2 que vous avez attaquée dans ce labo, mais sans le
