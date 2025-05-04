@@ -5,7 +5,7 @@ css: style.css
 
 ## Informations Générales
 
-- **Date du rendu des flags && de la correction des failles :** Vendredi 9 avril
+- **Date du rendu des flags && de la correction des failles :** Vendredi 9 mai
   2025, 23:59 CEST
 - [**Lien du code source**](https://classroom.github.com/a/PrmTPRDA)
 
