@@ -16,3 +16,7 @@ toc: false
 - Ouverture : **14h30** (1h15 après début)
 - Fermeture : **15h15** (2h après début ; 45min après ouverture de la partie
   pratique)
+- Composée de 3 questions d'écriture de code :
+  - une fonction utilisant les promesses,
+  - deux fonctions utilisant les méthodes sur Array,
+  - un générateur simple.
