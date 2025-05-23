@@ -59,6 +59,11 @@ La timeline sera la suivante.
 Nous vous encourageons vivement à venir nous voir régulièrement pour discuter de
 l'avancement de votre projet.
 
+# Rendu
+
+Vous rendrez votre projet et la présentation via
+[ce repo GitHub Classroom](https://classroom.github.com/a/0eIJxRCY).
+
 # Présentation finale
 
 ## Durée de votre présentation
@@ -70,9 +75,9 @@ contenu à présenter.
 
 | Taille de l'équipe | Durée de la présentation |
 | ------------------ | ------------------------ |
-| 2                  | 10 minutes               |
-| 3                  | 12 minutes               |
-| 4                  | 15 minutes               |
+| 2                  | ~10 minutes              |
+| 3                  | ~12 minutes              |
+| 4                  | ~15 minutes              |
 
 <!--| 1                  | 7 minutes                |-->
 
