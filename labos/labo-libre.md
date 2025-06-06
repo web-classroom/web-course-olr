@@ -3,6 +3,12 @@ title: Labo final - Libre
 css: style.css
 ---
 
+# Changelog
+
+| Date  | Changement                            |
+| ----- | ------------------------------------- |
+| 06.06 | [Mise à jour du barême](#évaluation). |
+
 # Description
 
 Lorsque vous travaillerez sur une application Web dans le futur, il est presque
@@ -86,36 +92,47 @@ de groupes et leur taille._
 
 # Évaluation
 
-Vous serez évalués sur les critères suivants.
+Vous serez évalués sur 25 points, répartis comme suit :
 
-## Présentation
+## Présentation (9pts)
 
-- Répartition du temps de parole (2pts) : il est important que chaque personne
-  participe de manière égale.
-- Respect du temps imparti (2pts) : vous avez un temps de parole défini, et il
-  est important que vous le respectiez.
-- Retours sur les technologies (2pts) : vous devez présenter les librairies ou
-  APIs que vous avez utilisées, et expliquer pourquoi vous les avez choisies, ce
-  que vous avez appris, les avantages et inconvénients de chaque technologie.
-  Apprenez-nous des choses !
-- Démonstration (2pts) : vous devez faire une démonstration fonctionnelle de
-  votre solution.
-- Questions (2pts) : votre équipe doit être prête à répondre aux questions.
+- 1pt - Répartition du temps de parole : chaque personne de l'équipe doit
+  participer de manière relativement égale.
+- 1pt - Respect du temps imparti : la présentation ne doit pas terminer trop en
+  avance, ni dépasser le temps imparti.
+- 3pts - Retour sur les technologies : vous devez présenter les technologies que
+  vous avez listées dans la description de votre projet. Votre objectif est que
+  les personnes de la classe sortent de votre présentation en ayant appris
+  **l'existence, le potentiel, les bases d'utilisation, les avantages et les
+  inconvénients** de chaque technologie que vous avez utilisée.
+- 2pts - Demo : chaque fonctionnalité promise doit être présentée de manière
+  fonctionnelle.
+- 2pts - Réponse aux questions : vous devez être prêt.e.s à répondre à toute
+  question liée aux décisions prises dans votre projet, aux détails
+  d'implémentation, ou aux technologies utilisées en général.
 
-## Code
+## Code (16pts)
 
-- Taux de participation (2pts) : chaque membre de l'équipe doit participer de
-  manière égale, sur la base des commits.
-- Respect des délais (2pts) : vous devez rendre votre projet à temps, c'est à
-  dire avant le début de la première présentation de votre classe.
-- Documentation et prise en main (2pts) : votre projet doit être facile à
-  prendre en main pour une personne qui n'a pas travaillé dessus et doit
-  fonctionner sur une autre machine que celle de la démonstration. Vous devez
-  donc fournir un `README.md` qui explique comment installer et lancer votre
-  projet.
-- Le projet fonctionne (2pts) : votre projet est fonctionnel et ne contient pas
-  de bugs majeurs.
-- Utilisation des bonnes pratiques (2pts) : qualité du code et bonnes pratiques
-  recommandées par les technologies que vous avez utilisées.
-- Cahier des charges et charge de travail (2pts) : vous devez respecter votre
-  cahier des charges, et avoir réparti le travail sur tout le temps imparti.
+- 2pts - Respect des délais et répartition du travail sur la durée : la date de
+  rendu doit être respectée, et le travail doit avoir été réparti
+  responsablement sur la durée du projet.
+- 3pts - Documentation et prise en main : votre code doit être proprement
+  documenté, et votre projet doit contenir un `README.md` clair et complet
+  décrivant comment installer et lancer votre projet.
+- 3pts - Le projet fonctionne : tout bug (non-négligeable) sera pénalisé.
+- 3pts - Bonnes pratiques : votre code doit être propre, lisible, et respecter
+  les bonnes pratiques des technologies utilisées.
+- 5pts - Respect du cahier des charges : votre rendu doit offrir toutes les
+  fonctionnalités et utiliser toutes les technologies promises dans la
+  description de votre projet.
+
+## Pénalité pour répartition inégale entre membres
+
+En cas de répartition inégale du travail entre les membres de l'équipe, nous
+nous réservons le droit de pénaliser les membres qui ont participé sensiblement
+moins que les autres. En cas de doute à ce sujet, n'hésitez pas à poser la
+question.
+
+La participation sera évaluée sur la base des commits de l'historique Git. Si
+vous avez travaillé en "Peer Programming" ou avec Live Share, vous pouvez aussi
+spécifier la contribution de chaque membre dans le `README.md` de votre projet.
