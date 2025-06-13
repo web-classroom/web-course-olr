@@ -86,6 +86,10 @@ plus de contenu à présenter.
 | 3                  | 11-16 minutes            |
 | 4                  | 13-18 minutes            |
 
+L'ordre de passage sera calculé aléatoirement au début de la séance et
+communiqué sur
+[ce tableur](https://hessoit-my.sharepoint.com/:x:/r/personal/olivier_lemer_hes-so_ch/Documents/Book.xlsx?d=wcbaecb0f13824faab36e07d453d6e7fc&csf=1&web=1&e=JulsGB&nav=MTVfezEyQUQwMzNELTJFMTAtNDkzNy1CQTNGLUNBRkFBMkVDNDg4NH0).
+
 # Évaluation
 
 Vous serez évalués sur 25 points, répartis comme suit :
