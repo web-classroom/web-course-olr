@@ -74,21 +74,17 @@ Vous rendrez votre projet et la présentation via
 
 ## Durée de votre présentation
 
-Vos présentations ne devront **strictement** pas dépasser les durées suivantes,
-en fonction de la taille de votre équipe. Ce choix est justifié par le fait
-qu’une plus grande équipe aura travaillé sur plus de choses et aura donc plus de
-contenu à présenter.
+La durée de votre présentation devra se trouver dans l'intervale donné par la
+taille de votre groupe dans le tableau suivant. Ce choix est justifié par le
+fait qu’une plus grande équipe aura travaillé sur plus de choses et aura donc
+plus de contenu à présenter.
 
 | Taille de l'équipe | Durée de la présentation |
 | ------------------ | ------------------------ |
-| 2                  | ~10 minutes              |
-| 3                  | ~12 minutes              |
-| 4                  | ~15 minutes              |
-
-<!--| 1                  | 7 minutes                |-->
-
-_Ces durées sont susceptibles de changer légèrement en fonction du nombre exact
-de groupes et leur taille._
+| 1                  | 7-12 minutes             |
+| 2                  | 9-14 minutes             |
+| 3                  | 11-16 minutes            |
+| 4                  | 13-18 minutes            |
 
 # Évaluation
 
